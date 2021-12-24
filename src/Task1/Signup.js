@@ -115,6 +115,7 @@ export class signup extends Component {
                         <div className="col-md-12">
                             <label className="labels">School</label>
                             <select onChange={(s) => { this.setState({ school: s.target.value}, () => { this.getclasses() }) }} class="form-select" id="inputGroupSelect02">
+                                    <option></option>
                                         {schools.length ? schools.map(school => <option key={school._id} value={school._id}> {school.name}</option>) : null}
                                     </select>
                           </div>
@@ -123,6 +124,7 @@ export class signup extends Component {
                         <div className="col-md-12">
                             <label className="labels">Classes</label>
                             <select onChange={(s) => { this.setState({ class: s.target.value}, () => { console.log(s.target.value) }) }} class="form-select" id="inputGroupSelect02">
+                                        <option></option>
                                         {classes.length ? classes.map(c => <option key={c._id} value={c._id}> {c.name}</option>) : null}
                                     </select>
                           </div>
